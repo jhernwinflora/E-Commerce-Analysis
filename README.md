@@ -362,4 +362,14 @@ ORDER BY avg_order_value DESC;
 
 > 🔗 **Power BI File:** [Download the e_commerce_dax_and_dashboard.pbix report](./e_commerce_dax_and_dashboard.pbix)
 
-### Executive Summary & Key Findings
+### Key Findings & Strategic Recommendations
+
+####1. **Customer Tier Revenue Concentration (Platinum Dominance)**
+* Finding: The Platinum tier drives an overwhelming 93.96% of total platform revenue (₹4,455,365,020.47 out of ₹4,741,566,354.41) with an average spend of ₹162,907.79 per customer and an average order frequency of 5.61 orders. In contrast, Silver and Gold tiers contribute minor shares of 1.13% and 4.90% respectively.   
+
+* Recommendation: Implement exclusive VIP loyalty programs, personalized perks, and early-access promotions tailored specifically for Platinum customers to protect core revenue, while creating structured upselling campaigns to transition Silver and Gold buyers into higher tiers.
+
+#### **2. Payment Mode Preferences & Transaction Value**
+* Finding: While UPI dominates total order volume (102,846 orders generating ₹2.53 Billion), Credit Cards yield the highest Average Order Value at ₹26,341.72, followed closely by UPI at ₹24,688.87. Cash on Delivery (COD) commands 65,679 orders with a lower average order value of ₹22,459.25.   
+
+* Recommendation: Encourage the adoption of higher-value digital payment methods (such as Credit Cards and UPI) through strategic checkout discounts or reward incentives to maximize basket sizes and mitigate the financial risks associated with Cash on Delivery.   
