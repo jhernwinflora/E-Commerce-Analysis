@@ -382,9 +382,12 @@ ORDER BY avg_order_value DESC;
 #### **4. Impact of Discount Brackets on Sales Volume and Ratings**
 * Finding: An analysis across discount brackets (0–10%, 11–25%, and 26–50%) demonstrates that deep discounts (26–50%) and low discounts (0–10%) yield virtually identical average customer ratings (4.40 vs 4.41) and nearly identical average quantities per order (~1.25). Steep discounting does not trigger significantly larger order quantities per transaction, nor does it negatively impact product ratings.
 
-*Recommendation: Optimize promotional budgets by moving away from broad, deep price cuts (26–50%) across all products; instead, utilize targeted bundle deals and loyalty-exclusive discounts to protect profit margins without sacrificing perceived product quality.
+* Recommendation: Optimize promotional budgets by moving away from broad, deep price cuts (26–50%) across all products; instead, utilize targeted bundle deals and loyalty-exclusive discounts to protect profit margins without sacrificing perceived product quality.
 
 #### **5. Geographic Sales Distribution & Regional Hubs**
 * Finding: Top-performing cities and states—such as Madurai (Tamil Nadu), New Delhi, Howrah (West Bengal), Kanpur, and Varanasi (Uttar Pradesh)—consistently drive the highest customer counts, order volumes, and total revenues (ranging between ₹1.24 Billion and ₹1.36 Billion per top geographic grouping).
 
-* Recommendation: Streamline supply chain logistics and establish regional fulfillment hubs or dark warehouses in high-density areas (such as Uttar Pradesh, Delhi, and Tamil Nadu) to minimize transit times and enhance customer delivery experiences. 
+* Recommendation: Streamline supply chain logistics and establish regional fulfillment hubs or dark warehouses in high-density areas (such as Uttar Pradesh, Delhi, and Tamil Nadu) to minimize transit times and enhance customer delivery experiences.
+
+# **Author - Jhernwin E. Flora**
+This project is part of my portfolio, showcasing my skills essential for data analyst roles. 
