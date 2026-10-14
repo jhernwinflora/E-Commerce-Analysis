@@ -352,3 +352,12 @@ WHERE Order_Status = 'Delivered'
 GROUP BY Payment_Mode
 ORDER BY avg_order_value DESC;
 ```
+
+## 📊 Interactive Dashboards
+### 1. Executive Sales Dashboard
+<img width="775" height="439" alt="image" src="https://github.com/user-attachments/assets/b2387647-754d-44ba-9340-cbaf575bde1f" />
+
+### 2. Operations, Customer & Inventory Deep Dive
+<img width="772" height="437" alt="image" src="https://github.com/user-attachments/assets/d26ba093-fbbd-4c8c-aeb4-4664f5c0e0e7" />
+
+> 🔗 **Power BI File:** [Download the e_commerce_dax_and_dashboard.pbix report](./e_commerce_dax_and_dashboard.pbix)
