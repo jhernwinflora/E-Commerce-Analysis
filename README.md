@@ -363,17 +363,3 @@ ORDER BY avg_order_value DESC;
 > 🔗 **Power BI File:** [Download the e_commerce_dax_and_dashboard.pbix report](./e_commerce_dax_and_dashboard.pbix)
 
 ### Executive Summary & Key Findings
-Based on the database queries and dashboard analytics, here are the key findings summarizing the platform's financial performance, customer behavior, geographic distribution, and operational efficiency:
-1. Financial & Executive Performance
-* The e-commerce platform generated a total gross revenue of ₹4.74 billion across 200,139 delivered orders.
-* The overall Average Order Value (AOV) stands at ₹23,691 per transaction.
-
-2. Product Category & Brand Dominance
-* Electronics serves as the primary revenue driver, commanding an overwhelming 72.62% of total platform sales.
-* Secondary revenue contributors include Home (12.09%), Sports (8.00%), and Fashion (5.62%), with minor contributions from Grocery, Beauty, and Books.
-* Brand performance is led by HP at ₹0.75 billion, followed by Noise (₹0.73 billion), Boat (₹0.67 billion), Samsung (₹0.67 billion), and Apple (₹0.62 billion).
-
-3. Customer Segmentation & Lifetime Value (CLV)
-* Revenue concentration is heavily skewed toward top-tier buyers, with the Platinum Tier accounting for 93.96% of total sales.
-* The Gold Tier contributes 4.90%, while the remaining share comes from Silver tier members.
-* Leading individual buyers (such as Preeti Verma, Pooja Sharma, and Pooja Shah) have each generated over ₹5.6 million across 170+ orders, with UPI being their unanimous preferred payment mode.
