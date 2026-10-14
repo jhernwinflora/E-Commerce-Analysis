@@ -364,7 +364,7 @@ ORDER BY avg_order_value DESC;
 
 ### Key Findings & Strategic Recommendations
 
-####1. **Customer Tier Revenue Concentration (Platinum Dominance)**
+#### 1. **Customer Tier Revenue Concentration (Platinum Dominance)**
 * Finding: The Platinum tier drives an overwhelming 93.96% of total platform revenue (₹4,455,365,020.47 out of ₹4,741,566,354.41) with an average spend of ₹162,907.79 per customer and an average order frequency of 5.61 orders. In contrast, Silver and Gold tiers contribute minor shares of 1.13% and 4.90% respectively.   
 
 * Recommendation: Implement exclusive VIP loyalty programs, personalized perks, and early-access promotions tailored specifically for Platinum customers to protect core revenue, while creating structured upselling campaigns to transition Silver and Gold buyers into higher tiers.
@@ -372,4 +372,19 @@ ORDER BY avg_order_value DESC;
 #### **2. Payment Mode Preferences & Transaction Value**
 * Finding: While UPI dominates total order volume (102,846 orders generating ₹2.53 Billion), Credit Cards yield the highest Average Order Value at ₹26,341.72, followed closely by UPI at ₹24,688.87. Cash on Delivery (COD) commands 65,679 orders with a lower average order value of ₹22,459.25.   
 
-* Recommendation: Encourage the adoption of higher-value digital payment methods (such as Credit Cards and UPI) through strategic checkout discounts or reward incentives to maximize basket sizes and mitigate the financial risks associated with Cash on Delivery.   
+* Recommendation: Encourage the adoption of higher-value digital payment methods (such as Credit Cards and UPI) through strategic checkout discounts or reward incentives to maximize basket sizes and mitigate the financial risks associated with Cash on Delivery.
+
+#### **3. Product Category & Brand Revenue Concentration**
+* Finding: Electronics (featuring top brands like HP, Noise, boAt, Samsung, and Apple) overwhelmingly dominate both sales volume and revenue generation across the platform. Specifically, HP leads brand revenue at over ₹754 Million, with Noise closely following at ₹729 Million.   
+
+* Recommendation: Form strategic vendor partnerships and secure priority stock allocations with leading electronic brands (HP, Noise, boAt) to prevent stockouts and safeguard the platform's primary revenue stream.
+
+#### **4. Impact of Discount Brackets on Sales Volume and Ratings**
+* Finding: An analysis across discount brackets (0–10%, 11–25%, and 26–50%) demonstrates that deep discounts (26–50%) and low discounts (0–10%) yield virtually identical average customer ratings (4.40 vs 4.41) and nearly identical average quantities per order (~1.25). Steep discounting does not trigger significantly larger order quantities per transaction, nor does it negatively impact product ratings.
+
+*Recommendation: Optimize promotional budgets by moving away from broad, deep price cuts (26–50%) across all products; instead, utilize targeted bundle deals and loyalty-exclusive discounts to protect profit margins without sacrificing perceived product quality.
+
+#### **5. Geographic Sales Distribution & Regional Hubs**
+* Finding: Top-performing cities and states—such as Madurai (Tamil Nadu), New Delhi, Howrah (West Bengal), Kanpur, and Varanasi (Uttar Pradesh)—consistently drive the highest customer counts, order volumes, and total revenues (ranging between ₹1.24 Billion and ₹1.36 Billion per top geographic grouping).
+
+* Recommendation: Streamline supply chain logistics and establish regional fulfillment hubs or dark warehouses in high-density areas (such as Uttar Pradesh, Delhi, and Tamil Nadu) to minimize transit times and enhance customer delivery experiences. 
