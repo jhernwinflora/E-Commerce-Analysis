@@ -16,9 +16,6 @@ Primary Dataset:
 ### Dataset & Database Schema
 
 The relational database (e_commerce) consists of three core tables:
-
 customers: Customer demographics, registration dates, tiers (Gold, Silver, Platinum), total orders, and lifetime spend.
-
 products: Product catalog details, original vs. selling prices, discount percentages, stock quantities, weights, and ratings.
-
 sales: Transactional records including order dates, delivery dates, quantities, order values, shipping costs, coupon codes, payment modes, and order statuses (Delivered, Returned, Cancelled).
