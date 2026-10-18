@@ -83,6 +83,7 @@ WHERE Review_Text IS NULL OR Review_Text = '';
 ---
 
 ## 💻 SQL Analysis & Core Queries
+**[e_commerce_queries.sql](./e_commerce_queries.sql)**
 ```sql
 -- PART 1: OVERVIEW & MACRO KPIs
 
@@ -292,6 +293,7 @@ GROUP BY delivery_speed_tier;
 ---
 
 ## 📈 Power BI Dashboard Preview
+**[e_commerce_data_analysis.pbix](./e_commerce_data_analysis.pbix)**
 
 ### Interactivity & Navigation
 * **Left-Hand Navigation Pane:** Allows seamless switching between report pages (*Executive Overview*, *Customer & Revenue Insights*, and *Inventory & Fulfillment*).
