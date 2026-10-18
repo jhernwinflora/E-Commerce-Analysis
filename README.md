@@ -27,9 +27,9 @@ E-commerce retail organizations generate massive transactional datasets daily, b
 
 ## 📊 Dataset Description
 The analysis utilizes three normalized CSV datasets:
-*   **`customers.csv` (40,000 rows)**: Customer demographics, registration dates, tiers (`Platinum`, `Gold`, `Silver`), and lifetime spend.
-*   **`products.csv` (2,000 rows)**: Product catalog details, original prices, selling prices, discount percentages, stock quantities, and ratings.
-*   **`sales.csv` (250,000 rows)**: Transaction-level logs capturing order dates, delivery dates, quantities, unit prices, shipping costs, coupon details, payment modes, and order statuses.
+*   **[customers.csv](./customers.csv) (40,000 rows)**: Customer demographics, registration dates, tiers (`Platinum`, `Gold`, `Silver`), and lifetime spend.
+*   **[products.csv](./products.csv) (2,000 rows)**: Product catalog details, original prices, selling prices, discount percentages, stock quantities, and ratings.
+*   **[sales.csv](./sales.csv) (250,000 rows)**: Transaction-level logs capturing order dates, delivery dates, quantities, unit prices, shipping costs, coupon details, payment modes, and order statuses.
 
 ---
 
