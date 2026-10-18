@@ -46,6 +46,7 @@ graph TD
 ---
 
 ## 🧹 Data Cleaning & Preparation (SQL)
+**[e_commerce_queries.sql](./e_commerce_queries.sql)**
 ```sql
 -- DATA CLEANING AND PREPARATION
 ALTER TABLE customers
