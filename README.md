@@ -84,7 +84,7 @@ WHERE Review_Text IS NULL OR Review_Text = '';
 ## 💻 SQL Analysis & Core Queries
 **[e_commerce_queries.sql](./e_commerce_queries.sql)**
 ```sql
--- PART 1: OVERVIEW & MACRO KPIs
+-- EXECUTIVE OVERVIEW
 
 -- 1. High-Level Counts: Total Unique Orders, Active Customers (with Purchases), and Products Sold in Sales
 SELECT 
@@ -114,31 +114,18 @@ SELECT
 FROM sales
 WHERE Order_Status = 'Delivered';
 
--- 2. Sales Performance by Product Category (with percentage contribution)
+-- 2. Geographic Performance: Top States by Sales Revenue and Unit Volume
 SELECT
-	p.Category,
-    SUM(s.Total_Amount) AS total_sales,
-	ROUND((SUM(s.Total_Amount) / (SELECT SUM(Total_Amount) FROM sales WHERE Order_Status = 'Delivered')) * 100, 2) AS sales_percentage
-FROM sales AS s
-INNER JOIN products AS p
-	ON s.Product_ID = p.Product_ID
-WHERE s.Order_Status = 'Delivered'
-GROUP BY p.Category
+	State,
+    COUNT(DISTINCT Order_ID) AS total_orders,
+    SUM(Quantity) AS total_sold_units,
+	SUM(Total_Amount) AS total_sales
+FROM sales
+WHERE Order_Status = 'Delivered'
+GROUP BY State
 ORDER BY total_sales DESC;
 
--- 3. Top 10 Best-Performing Brands by Sales Revenue
-SELECT
-	p.Brand,
-    SUM(s.Total_Amount) AS total_sales
-FROM sales AS s
-INNER JOIN products AS p
-	ON s.Product_ID = p.Product_ID
-WHERE s.Order_Status = 'Delivered'
-GROUP BY p.Brand
-ORDER BY total_sales DESC
-LIMIT 10;
-
--- 4. Monthly Revenue Trend and Month-over-Month (MoM) Growth Analysis
+-- 3. Monthly Revenue Trend and Month-over-Month (MoM) Growth Analysis
 SELECT
 	DATE_FORMAT(Order_Date, "%Y-%m") AS `year_month`,
     COUNT(Order_ID) AS total_orders,
@@ -152,53 +139,44 @@ WHERE Order_Status = 'Delivered'
 GROUP BY `year_month`
 ORDER BY `year_month`;
 
--- 5. Geographic Performance: Top States by Sales Revenue and Unit Volume
+-- 4. Sales Performance by Product Category (with percentage contribution)
 SELECT
-	State,
-    COUNT(DISTINCT Order_ID) AS total_orders,
-    SUM(Quantity) AS total_sold_units,
-	SUM(Total_Amount) AS total_sales
-FROM sales
-WHERE Order_Status = 'Delivered'
-GROUP BY State
+	p.Category,
+    SUM(s.Total_Amount) AS total_sales,
+	ROUND((SUM(s.Total_Amount) / (SELECT SUM(Total_Amount) FROM sales WHERE Order_Status = 'Delivered')) * 100, 2) AS sales_percentage
+FROM sales AS s
+INNER JOIN products AS p
+	ON s.Product_ID = p.Product_ID
+WHERE s.Order_Status = 'Delivered'
+GROUP BY p.Category
 ORDER BY total_sales DESC;
 
--- 6. Customer Segmentation: Revenue Contribution Share by Customer Tier
+-- 5. Top 10 Best-Performing Brands by Sales Revenue
+SELECT
+	p.Brand,
+    SUM(s.Total_Amount) AS total_sales
+FROM sales AS s
+INNER JOIN products AS p
+	ON s.Product_ID = p.Product_ID
+WHERE s.Order_Status = 'Delivered'
+GROUP BY p.Brand
+ORDER BY total_sales DESC
+LIMIT 10;
+
+
+-- 6. Customer Segmentation: Revenue Contribution Share by Customer Tier and Payment Mode
 SELECT
 	c.Customer_Tier,
-    SUM(s.Total_Amount) AS total_sales,
-    ROUND((SUM(s.Total_Amount)*100) / (SELECT SUM(Total_Amount) FROM sales WHERE Order_Status = 'Delivered'),2) AS sales_pct
+    s.Payment_Mode,
+    SUM(s.Total_Amount) AS total_sales
 FROM sales AS s
 INNER JOIN customers AS c
 	ON s.Customer_ID = c.Customer_ID
 WHERE s.Order_Status = 'Delivered'
-GROUP BY c.Customer_Tier
+GROUP BY c.Customer_Tier, s.Payment_Mode
 ORDER BY total_sales DESC;
 
--- 7. Customer Demographics: Sales Performance by Age Group
-SELECT 
-	Customer_Age_Group,
-    COUNT(DISTINCT Order_ID) AS total_orders,
-    SUM(Quantity) AS total_quantity_sold,
-    SUM(Total_Amount) AS total_sales
-FROM sales
-WHERE Order_Status = 'Delivered'
-GROUP BY Customer_Age_Group
-ORDER BY total_sales DESC;
-
--- 8. Payment Preferences: Transaction Volume and Revenue Share by Payment Mode
-SELECT
-	Payment_Mode,
-    COUNT(DISTINCT Order_ID) AS total_orders,
-    SUM(Quantity) AS total_quantity_sold,
-    SUM(Total_Amount) AS total_sales,
-    ROUND((SUM(Total_Amount) * 100) / (SELECT SUM(Total_Amount) FROM sales WHERE Order_Status = 'Delivered'),2) AS sales_pct
-FROM sales
-WHERE Order_Status = 'Delivered'
-GROUP BY Payment_Mode
-ORDER BY total_sales DESC;
-
--- 9. Top 10 Customers by Realized Revenue
+-- 7. Top 10 Customers by Realized Revenue
 SELECT
     c.Customer_ID,
     c.Customer_Name,
@@ -213,35 +191,10 @@ GROUP BY c.Customer_ID, c.Customer_Name, c.Customer_Tier
 ORDER BY total_sales DESC
 LIMIT 10;                               
 
+
 -- PART 3: PRODUCT & INVENTORY INSIGHTS
 
--- 1. Top 10 Best-Selling Products (Ranked by Units Sold)
-WITH cte AS
-(
-SELECT
-	p.Product_ID,
-    p.Product_Name,
-    p.Stock_Quantity,
-    SUM(s.Quantity) AS total_units_sold
-FROM products AS p
-INNER JOIN sales AS s
-	ON p.Product_ID = s.Product_ID
-WHERE s.Order_Status = 'Delivered'
-GROUP BY p.Product_ID, p.Product_Name, p.Stock_Quantity
-),
-ranked_cte AS
-(
-SELECT 
-	*,
-    ROW_NUMBER() OVER(ORDER BY total_units_sold DESC) AS unit_rank
-FROM cte
-)
-SELECT *
-FROM ranked_cte
-WHERE unit_rank <= 10
-ORDER BY unit_rank ASC;
-
--- 2. Revenue & Total Units Sold by Discount Bracket
+-- 1. Revenue & Total Units Sold by Discount Bracket
 SELECT
 	CASE 
 		WHEN p.Discount_Percent BETWEEN 0 AND 10 THEN '0-10%'
@@ -257,10 +210,21 @@ WHERE s.Order_Status = 'Delivered'
 GROUP BY discount_brackets
 ORDER BY total_sales DESC;
 
+-- 2. Top 10 Product by Total Units Sold
+SELECT
+	p.Product_ID,
+    p.Product_Name,
+    p.Stock_Quantity,
+    SUM(s.Quantity) AS total_units_sold
+FROM products AS p
+INNER JOIN sales AS s
+	ON p.Product_ID = s.Product_ID
+WHERE s.Order_Status = 'Delivered'
+GROUP BY p.Product_ID, p.Product_Name, p.Stock_Quantity
+ORDER BY total_units_sold DESC;
 
--- PART 4: OPERATIONS & LOGISTICS PERFORMANCE
 
--- 1. Supply Chain Audit: Total Delivered Orders by State
+-- 3. Supply Chain Audit: Total Delivered Orders by State
 SELECT
     State,
     COUNT(DISTINCT Order_ID) AS total_orders_delivered
@@ -269,7 +233,7 @@ WHERE Order_Status = 'Delivered'
 GROUP BY State
 ORDER BY total_orders_delivered DESC;
 
--- 2. Total Orders by Delivery Speed Tiers
+-- 3. Total Orders by Delivery Speed Tiers
 WITH delivery_days AS (
     SELECT
         Order_ID,
