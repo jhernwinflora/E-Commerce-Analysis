@@ -300,7 +300,7 @@ GROUP BY delivery_speed_tier;
 
 <img width="970" height="545" alt="image" src="https://github.com/user-attachments/assets/19a0654f-40d2-43c0-84ef-5702b9e04926" />
 
-<img width="966" height="545" alt="image" src="https://github.com/user-attachments/assets/575eeba2-b244-4d72-9a75-a864aff147b9" />
+<img width="966" height="543" alt="image" src="https://github.com/user-attachments/assets/6a6840e0-0745-44eb-9a45-c09e84cf594d" />
 
 <img width="965" height="546" alt="image" src="https://github.com/user-attachments/assets/dfe6acb5-814a-43b4-b11a-f05ae6947071" />
 
