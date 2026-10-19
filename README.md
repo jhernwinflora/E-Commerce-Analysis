@@ -307,20 +307,38 @@ GROUP BY delivery_speed_tier;
 
 ---
 
-## 💡 Key Findings & Business Insights
-1. **Revenue Realization**: Successfully delivered orders form the vast majority of gross potential sales, while returns and cancellations highlight operational leakage points in fulfillment.
+## 🔍 Key Findings & Insights
 
-2. **Customer Tier Value**: Premium customer tiers (Platinum and Gold) disproportionately drive the highest share of realized revenue compared to Silver tier customers.
+This Power BI reporting solution provides an end-to-end executive view of an e-commerce platform's financial performance, customer segmentation, and fulfillment efficiency. By filtering on Order Status = Delivered, the dashboard isolates Realized Revenue (₹4.74 billion across 200K orders and 40K customers), stripping out fulfillment friction to reflect actual cash-in-hand business performance.
 
-3. **Geographic Concentration**: High-volume sales are concentrated in major metropolitan states, indicating strong regional brand awareness.
+### 1. Executive Performance & Revenue Health
+* **Strong Core Revenue with High Leakage Risks**: The platform generated ₹4.74bn in Realized Revenue with an impressive Average Order Value (AOV) of ₹23,690. However, non-realized revenue status summary reveals substantial friction: ₹587M in Pending, ₹300M in Refunded, and ₹302M in Lost revenue (totaling ~₹1.19bn in uncaptured or reversed value).
 
-4. **Discount Impact**: Moderate discount brackets (11-25% and 26-50%) successfully stimulate unit volume without eroding overall margins.
+### 2. Category Concentration & Brand Dominance
+* **Electronics Monopoly**: Electronics is the runaway category leader, driving ₹3.44bn (72.62%) of total revenue. Home goods follow distantly at ₹0.57bn (12.09%), while Sports, Fashion, Grocery, Beauty, and Books make up the remaining tail.
 
-## 📋 Recommendations
-* **Targeted Retention**: Implement VIP loyalty perks for Platinum and Gold tier customers to maintain high AOV.
+* **Top Brands Drive the Catalog**: The top 5 brands—HP (₹0.75bn), Noise (₹0.73bn), boAt (₹0.67bn), Samsung (₹0.67bn), and Apple (₹0.62bn)—account for the lion's share of brand-specific earnings, showing heavy reliance on top-tier consumer tech and audio brands.
 
-* **Fulfillment Audit**: Investigate root causes for returned and cancelled orders to minimize revenue leakage.
+### 3. Customer Tier Behavior & Payment Preferences
+* **Platinum Tier Dominance**: The Platinum customer tier generates the vast majority of revenue, heavily outperforming Gold and Silver tiers.
 
-* **Regional Marketing**: Allocate digital ad spend toward high-performing states while testing localized campaigns in lower-performing regions.
+* **Payment Modalities**: Across high-tier customers, traditional and digital hybrid payment methods—particularly Cash on Delivery (COD) and digital channels (Credit/Debit cards and UPI)—play a critical role in high-value basket sizes.
+
+### 4. Inventory, Discounts, and Fulfillment Dynamics
+* **Evenly Distributed Delivery Speeds**: Fulfillment tiers are split almost equally into thirds: Fast (1–3 days) at 33.46%, Standard (4–5 days) at 33.39%, and Slow (6+ days) at 33.16%, indicating an operational bottleneck where a third of orders still face delayed transit times.
+
+* **Discount Sensitivity**: The 26%–50% discount bracket is the primary revenue driver, generating ₹2.3bn across 138K units sold. In contrast, low discounts (0–10%) yield only ₹0.8bn (33K units), proving that volume heavily relies on aggressive markdown strategies.
+
+* **Geographic Hotspots**: Order volume is heavily concentrated in northern and western hubs, led by Uttar Pradesh (26.1K orders), Haryana (25.7K orders), and Rajasthan (25.4K orders).
+
+## 💡 Strategic Business Recommendations
+* **Mitigate Revenue Leakage**: Address the ₹587M in Pending and ₹302M in Lost revenue by optimizing checkout verification, reducing payment gateway drop-offs, and implementing proactive customer communication for stalled orders.
+
+* **Optimize High-Value Fulfillment**: Since a full 33.16% of deliveries take 6+ days, logistics teams must streamline warehousing in key demand zones (UP, Haryana, Rajasthan) to shift slow shipments into faster tiers and minimize customer churn or refund requests.
+
+* **Re-evaluate Discount Margins**: While the 26–50% discount bracket drives top-line growth (₹2.3bn), heavy discounting compresses profit margins. Introduce targeted cross-selling or loyalty perks for Platinum members to reduce reliance on steep markdowns.
+
+* **Diversify Category Growth**: With Electronics capturing nearly 73% of revenue, cross-promote high-margin accessories in underperforming categories (such as Home and Fashion) to build a more resilient revenue mix.
+
 
 
