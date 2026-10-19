@@ -308,7 +308,7 @@ GROUP BY delivery_speed_tier;
 
 ## 🔍 Key Findings & Insights
 
-This Power BI reporting solution provides an end-to-end executive view of an e-commerce platform's financial performance, customer segmentation, and fulfillment efficiency. By filtering on Order Status = Delivered, the dashboard isolates Realized Revenue (₹4.74 billion across 200K orders and 40K customers), stripping out fulfillment friction to reflect actual cash-in-hand business performance.
+This Power BI reporting solution provides an end-to-end executive view of an e-commerce platform's financial performance, customer segmentation, and fulfillment efficiency. While the platform commands a Gross Potential Revenue of ₹5.93 billion, the core metrics are filtered to Order Status = Delivered to isolate the Realized Revenue at ₹4.74 billion (across 200K orders and 40K customers)—stripping out fulfillment friction and leakage to reflect actual cash-in-hand business performance.
 
 ### 1. Executive Performance & Revenue Health
 * **Strong Core Revenue with High Leakage Risks**: The platform generated ₹4.74bn in Realized Revenue with an impressive Average Order Value (AOV) of ₹23,690. However, non-realized revenue status summary reveals substantial friction: ₹587M in Pending, ₹300M in Refunded, and ₹302M in Lost revenue (totaling ~₹1.19bn in uncaptured or reversed value).
