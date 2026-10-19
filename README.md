@@ -307,3 +307,4 @@ This Power BI reporting solution provides an end-to-end executive view of an e-c
 
 # Author - Jhernwin Flora
 
+This project is part of my portfolio, showcasing my skills essential for data analyst roles.
