@@ -298,12 +298,11 @@ GROUP BY delivery_speed_tier;
 * **Left-Hand Navigation Pane:** Allows seamless switching between report pages (*Executive Overview*, *Customer & Revenue Insights*, and *Inventory & Fulfillment*).
 * **Right-Side Filter Toggle:** Users can click the arrow button on the right edge to expand or collapse the **Slicer Panel**, enabling dynamic filtering by year, order status, category, state, and payment mode without cluttering the main view.
 
-<img width="965" height="540" alt="image" src="https://github.com/user-attachments/assets/1ba4d516-017b-424c-a32c-90b687aa34d4" />
+<img width="970" height="545" alt="image" src="https://github.com/user-attachments/assets/19a0654f-40d2-43c0-84ef-5702b9e04926" />
 
-<img width="963" height="547" alt="image" src="https://github.com/user-attachments/assets/ffb24d18-0cc7-40ee-9a62-c2eff88f21fe" />
+<img width="966" height="545" alt="image" src="https://github.com/user-attachments/assets/575eeba2-b244-4d72-9a75-a864aff147b9" />
 
-<img width="964" height="544" alt="image" src="https://github.com/user-attachments/assets/71274b29-7138-4817-bca4-cb820b5b8468" />
-
+<img width="965" height="546" alt="image" src="https://github.com/user-attachments/assets/dfe6acb5-814a-43b4-b11a-f05ae6947071" />
 
 ---
 
