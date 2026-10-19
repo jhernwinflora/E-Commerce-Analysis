@@ -18,7 +18,7 @@ E-commerce retail organizations generate massive transactional datasets daily, b
 ---
 
 ## 🛠️ Tools & Technologies Used
-*   **SQL (MySQL)**: Data ingestion (`LOAD DATA LOCAL INFILE`), type casting, date sanitization (`STR_TO_DATE`), handling missing values, window functions (`LAG`, `ROW_NUMBER`), and multi-table joins.
+*   **SQL (MySQL)**: Data Validation, Data ingestion (`LOAD DATA LOCAL INFILE`), type casting, date sanitization (`STR_TO_DATE`), handling missing values, window functions (`LAG`, `ROW_NUMBER`), and multi-table joins.
 *   **Power BI**: Interactive business intelligence dashboard development, data modeling (star schema relationships), DAX measures, and KPI card formatting.
 *   **Git & GitHub**: Version control and professional portfolio presentation.
 
