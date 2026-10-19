@@ -303,5 +303,7 @@ This Power BI reporting solution provides an end-to-end executive view of an e-c
 
 * **Diversify Category Growth**: With Electronics capturing nearly 73% of revenue, cross-promote high-margin accessories in underperforming categories (such as Home and Fashion) to build a more resilient revenue mix.
 
+---
 
+# Author - Jhernwin Flora
 
