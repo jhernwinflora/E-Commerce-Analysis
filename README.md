@@ -305,6 +305,11 @@ This Power BI reporting solution provides an end-to-end executive view of an e-c
 
 ---
 
-# Author - Jhernwin Flora
+## 👤 15. Author & Acknowledgments
+* Jhernwin E. Flora
 
-This project is part of my portfolio, showcasing my skills essential for data analyst roles.
+* Aspiring Data Analyst | BS Mathematics Graduate
+
+* [GitHub Profile](https://github.com/jhernwinflora)
+  
+* [LinkedIn Profile](https://www.linkedin.com/in/jhernwin-flora-8a972a3a7/?isSelfProfile=true)
